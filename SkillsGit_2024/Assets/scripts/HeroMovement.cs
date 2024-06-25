@@ -22,7 +22,7 @@ public class   HeroMovement : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.UpArrow)) 
 		{
-				rb.AddForce(Vector2.up * 300);
+				rb.AddForce(Vector2.up * 400);
 		}
 	}
 }
