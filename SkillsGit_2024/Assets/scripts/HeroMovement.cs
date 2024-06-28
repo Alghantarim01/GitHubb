@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class   HeroMovement : MonoBehaviour {
+	
 
 	Rigidbody2D rb;
 	float speed;
+	int Lives;
 
+
+	public void setLives(){
+		Lives -= 1;
+
+		if (Lives <= 0) {
+			Debug.Log ("End of game");
+		}
+	}
 	void Start () {
 		speed = 5.1f;
 		rb = GetComponent<Rigidbody2D>();
+		Lives = 2;
 	}
 	
 	// Update is called once per frame
@@ -29,6 +40,7 @@ public class   HeroMovement : MonoBehaviour {
 		{
 			Debug.Log("SPIKED RECEIVED!");
 			transform.SetPositionAndRotation( new Vector3 (-5.58f,0.6f,0),Quaternion.identity);
+		    setLives();
 		}
 
 	}
