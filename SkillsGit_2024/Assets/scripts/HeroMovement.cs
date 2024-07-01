@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class   HeroMovement : MonoBehaviour {
-	
+
+	public int Lives;
 
 	Rigidbody2D rb;
 	float speed;
-	int Lives;
+
 
 
 	public void setLives(){
 		Lives -= 1;
 
-		if (Lives <= 0) {
+		if (Lives <= 0)
+		{
 			Debug.Log ("End of game");
+			SceneManager.LoadScene ("Lose");
 		}
 	}
 	void Start () {
@@ -43,4 +47,13 @@ public class   HeroMovement : MonoBehaviour {
 		    setLives();
 		}
 
+	private void OnCollisionEnter2D(Collision2D other) {
+
+		if (other.gameObject.tag == "extraLife")
+		{
+			Lives += 1;
+			Destroy(other.gameObject);
+		}
+	    
 	}
+}
