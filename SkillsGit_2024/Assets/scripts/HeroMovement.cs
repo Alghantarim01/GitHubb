@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class   HeroMovement : MonoBehaviour {
 
 	public int Lives;
+	public bool Vulnerable;
 
 	Rigidbody2D rb;
 	float speed;
@@ -15,7 +16,7 @@ public class   HeroMovement : MonoBehaviour {
 	public void setLives(){
 		Lives -= 1;
 
-		if (Lives <= 0)
+		if (Lives <= 0 || Vulnerable == true )
 		{
 			Debug.Log ("End of game");
 			SceneManager.LoadScene ("Lose");
@@ -25,6 +26,7 @@ public class   HeroMovement : MonoBehaviour {
 		speed = 5.1f;
 		rb = GetComponent<Rigidbody2D>();
 		Lives = 2;
+		Vulnerable = false;
 	}
 	
 	// Update is called once per frame
@@ -52,8 +54,21 @@ public class   HeroMovement : MonoBehaviour {
 		if (other.gameObject.tag == "extraLife")
 		{
 			Lives += 1;
-			Destroy(other.gameObject);
+			Destroy (other.gameObject);
 		}
-	    
+		else if (other.gameObject.tag == "Vulnerable")
+		{
+			Destroy (other.gameObject);
+			Vulnerable = true;
+			Debug.Log ("Vulnerable = true");
+			StartCoroutine ("VulnerableDeBuff");
+		}
 	}
+	IEnumerator VulnerableDeBuff()
+		{
+		yield return new WaitForSeconds (5f);
+		Vulnerable = false;
+		Debug.Log ("Vulnerable = false");
+		StartCoroutine ("VulnerableDeBuff");
+		}
 }

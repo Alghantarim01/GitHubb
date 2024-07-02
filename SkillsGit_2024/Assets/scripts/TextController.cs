@@ -26,5 +26,10 @@ public class TextController : MonoBehaviour {
 		lives = Hero.GetComponent<HeroMovement>().Lives;
 		LivesCounter.text = "Lives:" + lives;
 		GameTimer.text = "Time" + Time.timeSinceLevelLoad.ToString("0.00");
+
+		if (totalGems.Length == 0)
+		{
+			Hero.SendMessage ("SpawnAlter");
+		}
 	}
 }
