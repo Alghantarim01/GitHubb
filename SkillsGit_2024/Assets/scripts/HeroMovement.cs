@@ -46,7 +46,8 @@ public class   HeroMovement : MonoBehaviour {
 		{
 			Debug.Log("SPIKED RECEIVED!");
 			transform.SetPositionAndRotation( new Vector3 (-5.58f,0.6f,0),Quaternion.identity);
-		    setLives();
+	
+		setLives();
 		}
 
 	private void OnCollisionEnter2D(Collision2D other) {

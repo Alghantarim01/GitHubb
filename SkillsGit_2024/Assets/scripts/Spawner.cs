@@ -20,11 +20,14 @@ public class Spawner : MonoBehaviour {
 		
 	}
 
-	void SpawnAlter() 
+	void SpawnAlter() {
+		
+	if (Spawned == false) 
 	{
-		Instantiate (Alter, SpawnedPosition, Quaternion.identity);
+		Instantiate(Alter, SpawnedPosition, Quaternion.identity);
 		Spawned = true;
 		Debug.Log ("Alter Spawned");
 	}
 
+}
 }
