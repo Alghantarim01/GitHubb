@@ -2,15 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingsButton : MonoBehaviour {
+public class MainMenu : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
+
+	public void PlayGame()
+	{
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+
+
+	public void GameControls()
+	{
 		
 	}
+
+
+		public void Options()
+	{
+		SceneManager.LoadScene ("OptionsScene");
+	}
+
+
+
+
+	public void QuitGame()
+	{
+		Application.Quit ();
+	}
+
+
+
 }
