@@ -8,18 +8,18 @@ public class MainMenu : MonoBehaviour
 
 	public void PlayGame()
 	{
-		
+
 	}
 
 
 
 	public void GameControls()
 	{
-		
+
 	}
 
 
-		public void Options()
+	public void Options()
 	{
 		SceneManager.LoadScene ("OptionsScene");
 	}
@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour
 
 	public void QuitGame()
 	{
-		Application.Quit ();
+		Application.Quit (); 
 	}
 
 
