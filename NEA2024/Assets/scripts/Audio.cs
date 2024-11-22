@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Audio : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		float sliderValue = PlayerPrefs.GetFloat ("Volume");
 		this.GetComponent<AudioSource> ().volume = sliderValue;
