@@ -18,7 +18,7 @@ public class HeroAnimations : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetKey (KeyCode.RightArrow)) 
+		if (Input.GetKey (KeyCode.RightArrow) || (Input.GetKey (KeyCode.LeftArrow)))
 		{
 			MyAnimator.SetBool ("walk", true);
 		} 
@@ -27,7 +27,7 @@ public class HeroAnimations : MonoBehaviour {
 			MyAnimator.SetBool ("walk", false);
 		}
 
-		if (Input.GetKey (KeyCode.UpArrow))
+		if (Input.GetKey (KeyCode.UpArrow) || (Input.GetKey (KeyCode.W)))
 		{
 			MyAnimator.Play ("jump");
 		} 
@@ -45,7 +45,7 @@ public class HeroAnimations : MonoBehaviour {
 			MyAnimator.SetBool ("run", false);
 		}
 
-		if (Input.GetKey (KeyCode.DownArrow))
+		if (Input.GetKey (KeyCode.DownArrow) || (Input.GetKey (KeyCode.S)))
 		{
 			MyAnimator.SetBool ("dead", true);
 		} 
