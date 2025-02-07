@@ -1556,6 +1556,7 @@ GameObject:
   - component: {fileID: 1497648358}
   - component: {fileID: 1497648354}
   - component: {fileID: 1497648357}
+  - component: {fileID: 1497648360}
   m_Layer: 0
   m_Name: HeroPlayer
   m_TagString: Untagged
@@ -1687,6 +1688,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.34375, y: 2}
   m_Direction: 0
+--- !u!114 &1497648360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497648353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25807b6ed16c24c4b861e4837e7ea4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627841446
 GameObject:
   m_ObjectHideFlags: 0
