@@ -6,9 +6,9 @@
       <File FileName="Assets\scripts\Settings.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Audio.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\LevelSelection.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\HeroController.cs" Line="15" Column="15" />
+      <File FileName="Assets\scripts\HeroController.cs" Line="66" Column="3" />
       <File FileName="Assets\scripts\Camera.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\HeroAnimations.cs" Line="8" Column="1" />
+      <File FileName="Assets\scripts\HeroAnimations.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
