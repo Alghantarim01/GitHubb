@@ -5,7 +5,6 @@ using UnityEngine;
 public class HeroAnimations : MonoBehaviour {
 
 
-	private bool flipped;
 
 
 	Animator MyAnimator;
