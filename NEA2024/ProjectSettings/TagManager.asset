@@ -12,6 +12,7 @@ TagManager:
   - JumpPot
   - HeroPlayer
   - 'Obstical '
+  - Spike
   layers:
   - Default
   - TransparentFX
