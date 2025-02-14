@@ -67,6 +67,11 @@ public class HeroController : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
+	void resetPosition()
+	{
+		transform.SetPositionAndRotation( new Vector3 (-10.5f, -2.7f, 0) , Quaternion.identity);
+	}
+
 
 }
 

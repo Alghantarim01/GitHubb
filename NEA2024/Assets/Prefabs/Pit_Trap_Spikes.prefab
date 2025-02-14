@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4263510235659046}
   - component: {fileID: 212363964175844976}
   - component: {fileID: 61641305039713808}
+  - component: {fileID: 114767043508871944}
   m_Layer: 0
   m_Name: Pit_Trap_Spikes
   m_TagString: Spike
@@ -85,8 +86,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1019859629278764}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.5, y: -5.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.906445, y: -2.7724445, z: 0.3203125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4930749052862868}
@@ -234,6 +235,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9244075}
   m_EdgeRadius: 0
+--- !u!114 &114767043508871944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019859629278764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076965a8f4ff5de49a8ba003b6a43b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212288566814763068
 SpriteRenderer:
   m_ObjectHideFlags: 1
