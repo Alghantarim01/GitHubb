@@ -12,6 +12,8 @@ public class HeroController : MonoBehaviour
 	public float groundRadius = 0.2f;
 	public bool grounded = false;
 	public LayerMask WhatIsGround;
+	public int lives = 2;
+
 	void Start () 
 	{
 		rb = GetComponent<Rigidbody2D> ();
@@ -72,7 +74,13 @@ public class HeroController : MonoBehaviour
 		transform.SetPositionAndRotation( new Vector3 (-10.5f, -2.7f, 0) , Quaternion.identity);
 	}
 
-
+	public void setLives()
+	{
+		if (lives <= 0)
+		{
+			Debug.Log ("end of game");
+		}
+	}
 }
 
 	

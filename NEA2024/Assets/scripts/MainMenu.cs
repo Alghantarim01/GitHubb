@@ -42,6 +42,14 @@ public class MainMenu : MonoBehaviour
 		SceneManager.LoadScene("MainMenu");
 	}
 
+	public void NextLevel()
+	{
+		if (SceneManager.GetActiveScene ().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+		{
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
+		}
+	}
+
 
 	public void volumeSlider (float volume)
 	{
