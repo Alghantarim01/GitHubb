@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 	
-	[UnityEngine.SerializeField] private float startingHealth;
+	[UnityEngine.SerializeField] public float startingHealth;
 	public float currentHealth{ get; private set;}
 
 	private void awake ()
 	{
+		startingHealth = 0.3f;
 		currentHealth = startingHealth;
+
 	}
 	public void TakeDamage(float _damage)
 	{
@@ -24,6 +26,11 @@ public class Health : MonoBehaviour {
 	{
 		if(Input.GetKeyDown(KeyCode.E))
 			TakeDamage(1);
-			}
+	}
+
+	void start ()
+	{
+		startingHealth = 0.3f;
+	}
 }
 

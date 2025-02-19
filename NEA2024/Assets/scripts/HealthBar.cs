@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
-	[UnityEngine.SerializeField] private Health playerHealth;
-	[UnityEngine.SerializeField] private Image totalHealthBar;
-	[UnityEngine.SerializeField] private Image currentHealthBar;
+	[UnityEngine.SerializeField] public Health playerHealth;
+	[UnityEngine.SerializeField] public Image totalHealthBar;
+	[UnityEngine.SerializeField] public Image currentHealthBar;
 	// Use this for initialization
 	private void Start () {
 		totalHealthBar.fillAmount = playerHealth.currentHealth / 10 ;
