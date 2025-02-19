@@ -4,38 +4,26 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 	
-	public float fullHealth;
-	float currentHealth;
-	HeroController controlMovement;
+	[UnityEngine.SerializeField] private float startingHealth;
+	public float currentHealth{ get; private set;}
 
-	// Use this for initialization
-	void Start () 
+	private void awake ()
 	{
-		currentHealth = fullHealth;
-
-		controlMovement = GetComponent<HeroController> ();
+		currentHealth = startingHealth;
 	}
-	
-	// Update is called once per frame
-	void Update () 
+	public void TakeDamage(float _damage)
 	{
-		
-	}
-
-	public void addDamage(float damage)
-	{
-		if (damage <= 0)
-			return;
-		currentHealth -= damage;
-		if (currentHealth <= 0) {
-			makeDead ();
+		currentHealth = Mathf.Clamp (currentHealth - _damage, 0, startingHealth);
+		if (currentHealth > 0) {
+			//playerhurt
+		} else {
 		}
-
 	}
 
-	public void makeDead ()
+	private void update()
 	{
-		Destroy (gameObject);
-	}
+		if(Input.GetKeyDown(KeyCode.E))
+			TakeDamage(1);
+			}
 }
 

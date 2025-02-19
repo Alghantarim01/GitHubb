@@ -14,8 +14,9 @@ public class Spikes : MonoBehaviour {
 		
 	}
 
-	private void OnCollisionEnter2d (Collision2D other)
+	 void OnCollisionEnter2d (Collision2D other)
 	{
-		Debug.Log ("spiked");
+		Debug.Log ("colliosn detected with " + other.gameObject.name);
+
 	}
 }
