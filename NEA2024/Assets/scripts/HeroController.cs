@@ -71,6 +71,7 @@ public class HeroController : MonoBehaviour
 
 	void resetPosition()
 	{
+		Debug.Log ("spike recieved");
 		transform.SetPositionAndRotation( new Vector3 (-10.5f, -2.7f, 0) , Quaternion.identity);
 	}
 

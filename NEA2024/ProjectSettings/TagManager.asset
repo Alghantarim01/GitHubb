@@ -13,6 +13,7 @@ TagManager:
   - HeroPlayer
   - 'Obstical '
   - Spike
+  - BearTrap
   layers:
   - Default
   - TransparentFX
