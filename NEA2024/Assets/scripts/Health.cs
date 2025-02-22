@@ -4,33 +4,22 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 	
-	[UnityEngine.SerializeField] public float startingHealth;
-	public float currentHealth{ get; private set;}
+	public int maxHealth = 10;
+	public int health;
 
-	private void awake ()
+
+	void Start()
 	{
-		startingHealth = 0.3f;
-		currentHealth = startingHealth;
-
+		health = maxHealth;
 	}
-	public void TakeDamage(float _damage)
+	public void TakeDamage (int damage)
 	{
-		currentHealth = Mathf.Clamp (currentHealth - _damage, 0, startingHealth);
-		if (currentHealth > 0) {
-			//playerhurt
-		} else {
+		health -= damage;
+		if (health <= 0) {
+			Destroy (gameObject);
 		}
 	}
 
-	private void update()
-	{
-		if(Input.GetKeyDown(KeyCode.E))
-			TakeDamage(1);
-	}
 
-	void start ()
-	{
-		startingHealth = 0.3f;
-	}
 }
 

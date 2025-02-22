@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4030599881179748}
   - component: {fileID: 212715712889639832}
   - component: {fileID: 95226889487773272}
-  - component: {fileID: 61303470556174568}
   - component: {fileID: 50240749193294730}
+  - component: {fileID: 114249302390463352}
+  - component: {fileID: 70797139320554492}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -63,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61303470556174568
-BoxCollider2D:
+--- !u!70 &70797139320554492
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,18 +77,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.15, y: 1.85}
-    newSize: {x: 1.15, y: 1.85}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1.15, y: 1.85}
-  m_EdgeRadius: 0
+  m_Direction: 0
 --- !u!95 &95226889487773272
 Animator:
   serializedVersion: 3
@@ -106,6 +97,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114249302390463352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1366284361491776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1338f1c258261da41932ca6902623691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  playerHealth: {fileID: 0}
 --- !u!212 &212715712889639832
 SpriteRenderer:
   m_ObjectHideFlags: 1

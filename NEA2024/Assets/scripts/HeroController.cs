@@ -82,6 +82,10 @@ public class HeroController : MonoBehaviour
 			Debug.Log ("end of game");
 		}
 	}
+
+
+
+
 }
 
 	

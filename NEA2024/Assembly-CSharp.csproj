@@ -54,9 +54,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\Audio.cs" />
+     <Compile Include="Assets\scripts\BearTrap.cs" />
      <Compile Include="Assets\scripts\BuffDebuffController.cs" />
      <Compile Include="Assets\scripts\Camera.cs" />
+     <Compile Include="Assets\scripts\EnemyAttack.cs" />
      <Compile Include="Assets\scripts\EnemyHealtth.cs" />
+     <Compile Include="Assets\scripts\GameController.cs" />
      <Compile Include="Assets\scripts\Health.cs" />
      <Compile Include="Assets\scripts\HealthBar.cs" />
      <Compile Include="Assets\scripts\HeroAnimations.cs" />
@@ -64,6 +67,7 @@
      <Compile Include="Assets\scripts\LevelSelection.cs" />
      <Compile Include="Assets\scripts\MainMenu.cs" />
      <Compile Include="Assets\scripts\Settings.cs" />
+     <Compile Include="Assets\scripts\Spawner.cs" />
      <Compile Include="Assets\scripts\Spikes.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

@@ -14,6 +14,7 @@ TagManager:
   - 'Obstical '
   - Spike
   - BearTrap
+  - Enemy
   layers:
   - Default
   - TransparentFX
