@@ -1,23 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\EnemyAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\BearTrap.cs">
     <Files>
       <File FileName="Assets\scripts\MainMenu.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Settings.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Audio.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\LevelSelection.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\HeroController.cs" Line="87" Column="1" />
-      <File FileName="Assets\scripts\HeroAnimations.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\HeroController.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\HeroAnimations.cs" Line="14" Column="3" />
       <File FileName="Assets\scripts\Camera.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\BuffDebuffController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Health.cs" Line="23" Column="1" />
+      <File FileName="Assets\scripts\Health.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\EnemyHealtth.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Spikes.cs" Line="7" Column="1" />
-      <File FileName="Assets\scripts\HealthBar.cs" Line="8" Column="1" />
-      <File FileName="Assets\scripts\EnemyAttack.cs" Line="11" Column="2" />
-      <File FileName="Assets\scripts\Spawner.cs" Line="14" Column="52" />
-      <File FileName="Assets\scripts\BearTrap.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GameController.cs" Line="20" Column="67" />
+      <File FileName="Assets\scripts\HealthBar.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\EnemyAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BearTrap.cs" Line="23" Column="39" />
+      <File FileName="Assets\scripts\GameController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
