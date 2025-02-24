@@ -61,7 +61,14 @@ public class HeroAnimations : MonoBehaviour {
 			MyAnimator.SetBool ("attack", false);
 		}
 
-
+		if (Input.GetKey (KeyCode.Mouse1))
+		{
+			MyAnimator.SetBool ("attack2", true);
+		} 
+		else
+		{
+			MyAnimator.SetBool ("attack2", false);
+		}
 
 
 
