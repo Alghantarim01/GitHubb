@@ -21,7 +21,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -1.8426743
+        value: -1.8660316
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -29,17 +29,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.083333336
-        value: -1.7255096
-        inSlope: 2.8119507
-        outSlope: 2.8119507
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
         time: 0.16666667
-        value: -0.63907623
+        value: -0.7374916
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -48,16 +39,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -1.043827
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 2.300682
+        value: -0.970562
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -66,16 +48,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: 0.7476883
-        inSlope: -23.89234
-        outSlope: -23.89234
+        value: 1.5318642
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: -1.6813736
+        value: 0.7345314
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -86,7 +68,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.x
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -94,16 +76,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.7881927
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.083333336
-        value: 1.5538635
+        value: 1.5917587
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -112,34 +85,25 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 2.022522
-        inSlope: 2.726715
-        outSlope: 2.726715
+        value: 1.6408157
+        inSlope: 0.5886841
+        outSlope: 0.5886841
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 2.2355423
-        inSlope: 1.7041625
-        outSlope: 1.7041625
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 5.2605286
-        inSlope: 6.880957
-        outSlope: 6.880957
+        value: 2.1069565
+        inSlope: 3.1963937
+        outSlope: 3.1963937
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: 5.977295
+        value: 6.670204
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -148,7 +112,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: 1.650116
+        value: 5.8606033
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -159,7 +123,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.x
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -167,7 +131,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -1.5018406
+        value: -1.4720106
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -176,7 +140,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.083333336
-        value: -1.5870514
+        value: -1.606945
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -185,43 +149,25 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1.768125
-        inSlope: 1.1929547
-        outSlope: 1.1929547
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 1.8426847
+        value: 1.8645463
         inSlope: 0
         outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 0.07834005
-        inSlope: -9.681878
-        outSlope: -9.681878
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: -2.191431
-        inSlope: 0
-        outSlope: 0
+        value: 0.04906559
+        inSlope: -6.329646
+        outSlope: -6.329646
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: -1.687037
+        value: -2.3552175
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -232,7 +178,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.y
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -240,7 +186,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.8308048
+        value: 1.5888062
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -249,52 +195,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.083333336
-        value: 2.0012264
-        inSlope: 0
-        outSlope: 0
+        value: 1.858675
+        inSlope: 1.7664186
+        outSlope: 1.7664186
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1.9373198
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 2.0864391
-        inSlope: 1.192955
-        outSlope: 1.192955
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 7.6327047
-        inSlope: 0
-        outSlope: 0
+        value: 1.9322758
+        inSlope: 0.44160464
+        outSlope: 0.44160464
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: 2.5091262
-        inSlope: -15.291122
-        outSlope: -15.291122
+        value: 7.6731176
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: 1.8719964
+        value: 2.8645515
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -305,7 +233,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.y
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   m_PPtrCurves:
@@ -319,19 +247,19 @@ AnimationClip:
     - time: 0.25
       value: {fileID: 21300036, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - time: 0.33333334
+      value: {fileID: 21300038, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
+    - time: 0.4166667
       value: {fileID: 21300040, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
-    - time: 0.41666666
-      value: {fileID: 21300042, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - time: 0.5
-      value: {fileID: 21300044, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
+      value: {fileID: 21300042, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - time: 0.5833333
+      value: {fileID: 21300044, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
+    - time: 0.6666666
       value: {fileID: 21300046, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
-    - time: 0.6666667
+    - time: 0.74999994
       value: {fileID: 21300048, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
-    - time: 0.75
+    - time: 0.83333325
       value: {fileID: 21300050, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
-    - time: 0.8333333
-      value: {fileID: 21300052, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -344,28 +272,28 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3597670104
+      path: 2996461094
       attribute: 413499720
       script: {fileID: 0}
       typeID: 61
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3597670104
+      path: 2996461094
       attribute: 4197328169
       script: {fileID: 0}
       typeID: 61
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3597670104
+      path: 2996461094
       attribute: 1872933342
       script: {fileID: 0}
       typeID: 61
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3597670104
+      path: 2996461094
       attribute: 2368279999
       script: {fileID: 0}
       typeID: 61
@@ -383,19 +311,19 @@ AnimationClip:
     - {fileID: 21300032, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300034, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300036, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
+    - {fileID: 21300038, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300040, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300042, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300044, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300046, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300048, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
     - {fileID: 21300050, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
-    - {fileID: 21300052, guid: 436fb08bf29dc1440b276af2cbe56283, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9166666
+    m_StopTime: 0.91666657
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -416,7 +344,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -1.8426743
+        value: -1.8660316
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -424,17 +352,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.083333336
-        value: -1.7255096
-        inSlope: 2.8119507
-        outSlope: 2.8119507
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
         time: 0.16666667
-        value: -0.63907623
+        value: -0.7374916
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -443,16 +362,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -1.043827
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 2.300682
+        value: -0.970562
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -461,16 +371,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: 0.7476883
-        inSlope: -23.89234
-        outSlope: -23.89234
+        value: 1.5318642
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: -1.6813736
+        value: 0.7345314
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -481,7 +391,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.x
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -489,16 +399,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.7881927
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.083333336
-        value: 1.5538635
+        value: 1.5917587
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -507,34 +408,25 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 2.022522
-        inSlope: 2.726715
-        outSlope: 2.726715
+        value: 1.6408157
+        inSlope: 0.5886841
+        outSlope: 0.5886841
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 2.2355423
-        inSlope: 1.7041625
-        outSlope: 1.7041625
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 5.2605286
-        inSlope: 6.880957
-        outSlope: 6.880957
+        value: 2.1069565
+        inSlope: 3.1963937
+        outSlope: 3.1963937
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: 5.977295
+        value: 6.670204
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -543,7 +435,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: 1.650116
+        value: 5.8606033
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -554,7 +446,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.x
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -562,7 +454,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -1.5018406
+        value: -1.4720106
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -571,7 +463,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.083333336
-        value: -1.5870514
+        value: -1.606945
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -580,43 +472,25 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1.768125
-        inSlope: 1.1929547
-        outSlope: 1.1929547
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 1.8426847
+        value: 1.8645463
         inSlope: 0
         outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 0.07834005
-        inSlope: -9.681878
-        outSlope: -9.681878
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: -2.191431
-        inSlope: 0
-        outSlope: 0
+        value: 0.04906559
+        inSlope: -6.329646
+        outSlope: -6.329646
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: -1.687037
+        value: -2.3552175
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -627,7 +501,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.y
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   - curve:
@@ -635,7 +509,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.8308048
+        value: 1.5888062
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -644,52 +518,34 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.083333336
-        value: 2.0012264
-        inSlope: 0
-        outSlope: 0
+        value: 1.858675
+        inSlope: 1.7664186
+        outSlope: 1.7664186
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 1.9373198
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.33333334
-        value: 2.0864391
-        inSlope: 1.192955
-        outSlope: 1.192955
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6666667
-        value: 7.6327047
-        inSlope: 0
-        outSlope: 0
+        value: 1.9322758
+        inSlope: 0.44160464
+        outSlope: 0.44160464
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.75
-        value: 2.5091262
-        inSlope: -15.291122
-        outSlope: -15.291122
+        value: 7.6731176
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: 1.8719964
+        value: 2.8645515
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -700,7 +556,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.y
-    path: NBHitBox
+    path: NBAttackBox
     classID: 61
     script: {fileID: 0}
   m_EulerEditorCurves: []

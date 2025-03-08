@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 212275413381867612}
   - component: {fileID: 95177056060377644}
   - component: {fileID: 70467691752257910}
+  - component: {fileID: 114373929046836748}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +131,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114373929046836748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1754346677573218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157114ef452bbb749bb0b79c1ddfaefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212275413381867612
 SpriteRenderer:
   m_ObjectHideFlags: 1
