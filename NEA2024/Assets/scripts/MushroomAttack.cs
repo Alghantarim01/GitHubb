@@ -19,19 +19,24 @@ public class MushroomAttack : MonoBehaviour {
 	void Update () {
 		
 	}
-	void OnCollisionEnter2D (Collision2D collision)
+	void OnTriggerEnter2D (Collider2D collision)
 	{
 		if (collision.gameObject.name == "HeroPlayer")
 		{
 			EnemyAnimator.Play ("MSAttack");
 			Debug.Log ("reduce player health");
 		} 
+		if (collision.gameObject.name == "HeroAttackBox")
+		{
+			Debug.Log ("reduce enemy health");
+			EnemyAnimator.Play ("MSTakeHit");
+		}
 
 
 	}
 	void MSTakeHitAnimation()
 	{
-		Debug.Log ("spike recieved");
+		Debug.Log ("hit recieved");
 		EnemyAnimator.Play ("MSTakeHit");
 	}
 

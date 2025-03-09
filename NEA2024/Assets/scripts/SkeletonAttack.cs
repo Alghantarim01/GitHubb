@@ -2,27 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonAttack : MonoBehaviour {
+public class SkeletonAttack : MonoBehaviour
+{
 
 	Animator EnemyAnimator;
 	GameObject Player;
+	GameObject HeroAttackBox;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		EnemyAnimator = GetComponent<Animator> ();
 		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
+		HeroAttackBox = GameObject.FindGameObjectWithTag ("HeroAttackBox");
 	}
 
 	// Update is called once per frame
 	void Update () {
 
 	}
-	void OnCollisionEnter2D (Collision2D collision)
+	void OnTriggerEnter2D (Collider2D collision)
 	{
-		if (collision.gameObject.name == "HeroPlayer") {
+		if (collision.gameObject.name == "HeroPlayer")
+		{
 			EnemyAnimator.Play ("SKattack");
 			Debug.Log ("reduce player health");
+		} 
+		if (collision.gameObject.name == "HeroAttackBox")
+		{
+			Debug.Log ("reduce enemy health");
+			EnemyAnimator.Play ("SKhit");
 		}
-
+			
 	}
+
+
+
 }
+

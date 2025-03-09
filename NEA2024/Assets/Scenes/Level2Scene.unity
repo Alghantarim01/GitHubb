@@ -295,6 +295,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4488286135283456, guid: f4a49bbded83f094d80988762dc45d34,
     type: 2}
   m_PrefabInternal: {fileID: 241934296}
+--- !u!1 &245624501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1366284361491776, guid: 369d409da28fa1a40a6f5da492b0127d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1399928712}
+--- !u!50 &245624506
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245624501}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &354582604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1728825485612286, guid: 48e5a8df1b358dc4bb3127b150f042ed,
@@ -522,6 +547,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb5bc2b763d6e54c82b7d1a122a96cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &779529948
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779529942}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &836289784
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +697,31 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51403e66ec83b2847a70b11a8d0625d4, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1108614050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1461023522475400, guid: eb9534977d947144996dea5638df0567,
+    type: 2}
+  m_PrefabInternal: {fileID: 1611509437}
+--- !u!50 &1108614052
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108614050}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!4 &1131297644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4805711460844060, guid: 51403e66ec83b2847a70b11a8d0625d4,
@@ -796,6 +866,11 @@ Prefab:
     - target: {fileID: 1521720799829684, guid: 369d409da28fa1a40a6f5da492b0127d, type: 2}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 70797139320554492, guid: 369d409da28fa1a40a6f5da492b0127d,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114860696974688880, guid: 369d409da28fa1a40a6f5da492b0127d, type: 2}
@@ -2675,7 +2750,33 @@ Prefab:
       propertyPath: playerCollider
       value: 
       objectReference: {fileID: 1178483217}
-    m_RemovedComponents: []
+    - target: {fileID: 61498872826605338, guid: eb9534977d947144996dea5638df0567,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.17584956
+      objectReference: {fileID: 0}
+    - target: {fileID: 61498872826605338, guid: eb9534977d947144996dea5638df0567,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.48810697
+      objectReference: {fileID: 0}
+    - target: {fileID: 61498872826605338, guid: eb9534977d947144996dea5638df0567,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.041200325
+      objectReference: {fileID: 0}
+    - target: {fileID: 61498872826605338, guid: eb9534977d947144996dea5638df0567,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.31333068
+      objectReference: {fileID: 0}
+    - target: {fileID: 61498872826605338, guid: eb9534977d947144996dea5638df0567,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114172452723112668, guid: eb9534977d947144996dea5638df0567, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: eb9534977d947144996dea5638df0567, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1622394029

@@ -9,7 +9,7 @@ public class HeroAttack : MonoBehaviour {
 	GameObject Skeleton;
 	GameObject NightBorne;
 	GameObject Player;
-	 public Collider2D enemyCollider;
+	public Collider2D enemyCollider;
 	public Collider2D playerCollider;
 
 
@@ -22,8 +22,7 @@ public class HeroAttack : MonoBehaviour {
 		Mushroom = GameObject.FindGameObjectWithTag ("Mushroom");
 		Skeleton = GameObject.FindGameObjectWithTag ("Skeleton");
 		NightBorne = GameObject.FindGameObjectWithTag ("NightBorne");
-		Collider2D enemyCollider = Mushroom.GetComponent<Collider2D> ();
-		Collider2D playerCollider = Player.GetComponent<Collider2D> ();
+
 
 
 	}
@@ -32,14 +31,14 @@ public class HeroAttack : MonoBehaviour {
 	void Update () {
 
 	}
-	void OnCollisionEnter2D (Collision2D collision)
+	void OnTriggerEnter2D (Collider2D collision)
 	{
 		if (collision.gameObject.name == "Mushroom") 
 		{
-			Physics2D.IgnoreCollision (enemyCollider, playerCollider, true);
+			
 			//EnemyAnimator.Play ("MSTakeHit");
 			Debug.Log ("reduce mushroom health");
-			Player.SendMessage ("MSTakeHitAnimation");
+			//Player.SendMessage ("MSTakeHitAnimation");
 		}
 
 	}
