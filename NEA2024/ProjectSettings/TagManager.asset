@@ -20,6 +20,7 @@ TagManager:
   - 'NightBorne '
   - NightBorne
   - HeroAttackBox
+  - JumpPoisonPot
   layers:
   - Default
   - TransparentFX
@@ -34,7 +35,7 @@ TagManager:
   - Mushroom
   - HeroPlayer
   - HeroAttackBox
-  - 
+  - Skeleton
   - 
   - 
   - 

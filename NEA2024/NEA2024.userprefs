@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\HeroAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\BossAI.cs">
     <Files>
       <File FileName="Assets\scripts\MainMenu.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Settings.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Audio.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\LevelSelection.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\HeroController.cs" Line="72" Column="1" />
-      <File FileName="Assets\scripts\HeroAnimations.cs" Line="14" Column="3" />
+      <File FileName="Assets\scripts\HeroController.cs" Line="95" Column="18" />
+      <File FileName="Assets\scripts\HeroAnimations.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Camera.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\BuffDebuffController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Health.cs" Line="1" Column="1" />
@@ -16,12 +16,13 @@
       <File FileName="Assets\scripts\HealthBar.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\EnemyAttack.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Spawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\BearTrap.cs" Line="12" Column="3" />
+      <File FileName="Assets\scripts\BearTrap.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\SkeletonAttack.cs" Line="23" Column="33" />
-      <File FileName="Assets\scripts\MushroomAttack.cs" Line="24" Column="17" />
+      <File FileName="Assets\scripts\SkeletonAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\MushroomAttack.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\NightBorneAttack.cs" Line="23" Column="27" />
-      <File FileName="Assets\scripts\HeroAttack.cs" Line="12" Column="2" />
+      <File FileName="Assets\scripts\HeroAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BossAI.cs" Line="16" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

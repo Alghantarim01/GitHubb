@@ -33,11 +33,12 @@ public class HeroAttack : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D collision)
 	{
-		if (collision.gameObject.name == "Mushroom") 
+		Debug.Log ("hero collided with" + gameObject.tag);
+		//if (collision.gameObject.name == "Mushroom") 
 		{
 			
 			//EnemyAnimator.Play ("MSTakeHit");
-			Debug.Log ("reduce mushroom health");
+			//Debug.Log ("reduce mushroom health");
 			//Player.SendMessage ("MSTakeHitAnimation");
 		}
 

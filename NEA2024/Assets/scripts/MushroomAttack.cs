@@ -9,7 +9,8 @@ public class MushroomAttack : MonoBehaviour {
 	GameObject HeroAttackBox;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		EnemyAnimator = GetComponent<Animator> ();
 		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
 		HeroAttackBox = GameObject.FindGameObjectWithTag ("HeroAttackBox");
@@ -31,14 +32,5 @@ public class MushroomAttack : MonoBehaviour {
 			Debug.Log ("reduce enemy health");
 			EnemyAnimator.Play ("MSTakeHit");
 		}
-
-
 	}
-	void MSTakeHitAnimation()
-	{
-		Debug.Log ("hit recieved");
-		EnemyAnimator.Play ("MSTakeHit");
-	}
-
-	
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SkeletonAttack : MonoBehaviour
 {
-
 	Animator EnemyAnimator;
 	GameObject Player;
 	GameObject HeroAttackBox;
@@ -33,10 +32,10 @@ public class SkeletonAttack : MonoBehaviour
 			Debug.Log ("reduce enemy health");
 			EnemyAnimator.Play ("SKhit");
 		}
-			
 	}
-
-
-
+			
 }
+
+
+
 
