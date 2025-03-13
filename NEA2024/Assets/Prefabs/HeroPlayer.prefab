@@ -19,14 +19,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4541849302106164}
-  - component: {fileID: 212449708249663734}
+  - component: {fileID: 70597554884364112}
   - component: {fileID: 50094583778818294}
+  - component: {fileID: 212449708249663734}
   - component: {fileID: 95632042238301136}
+  - component: {fileID: 114379969860733024}
   - component: {fileID: 114495518965392070}
   - component: {fileID: 114402812726031558}
   - component: {fileID: 114171958944905586}
   - component: {fileID: 114214309816306872}
-  - component: {fileID: 70597554884364112}
   m_Layer: 9
   m_Name: HeroPlayer
   m_TagString: HeroPlayer
@@ -43,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4383252166654670}
   - component: {fileID: 61498872826605338}
-  - component: {fileID: 114172452723112668}
+  - component: {fileID: 50019674191930876}
   m_Layer: 12
   m_Name: HeroAttackBox
   m_TagString: HeroAttackBox
@@ -116,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207292129478342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.43, y: -2.69, z: 0}
+  m_LocalPosition: {x: -5.45, y: -2.02, z: 0}
   m_LocalScale: {x: 1.9999998, y: 2, z: 1}
   m_Children:
   - {fileID: 4016595651736096}
@@ -178,6 +179,26 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!50 &50019674191930876
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461023522475400}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!50 &50094583778818294
 Rigidbody2D:
   serializedVersion: 4
@@ -207,10 +228,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17584956}
+  m_Offset: {x: -0.005350597, y: 4.0183434}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -221,7 +242,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.48810697}
+  m_Size: {x: 0.16204257, y: 0.5432863}
   m_EdgeRadius: 0
 --- !u!70 &70597554884364112
 CapsuleCollider2D:
@@ -276,17 +297,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Alter: {fileID: 1620463221831618, guid: ce0176159b19a9d4e91d196827bdc78f, type: 2}
   SpawnedPosition: {x: 75.5, y: -1.15, z: 0}
---- !u!114 &114172452723112668
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461023522475400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1483b6ec46fb6e243b760666e494b169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114214309816306872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,6 +310,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   health: 0
+--- !u!114 &114379969860733024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207292129478342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1483b6ec46fb6e243b760666e494b169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyCollider: {fileID: 0}
+  playerCollider: {fileID: 0}
 --- !u!114 &114402812726031558
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,6 +14,11 @@ public class BossAI : MonoBehaviour {
 	private bool movingRight = false;
 	Animator EnemyAnimator;
 
+	void start()
+	{
+		EnemyAnimator = GetComponent<Animator> ();
+	}
+
 
 	void Update()
 	{
@@ -38,7 +43,10 @@ public class BossAI : MonoBehaviour {
 		{
 			transform.position = Vector2.MoveTowards(transform.position, rightLimit.position, moveSpeed * Time.deltaTime);
 			if (Vector2.Distance (transform.position, rightLimit.position) < 0.1f) 
+				
+
 			{
+
 				movingRight = false;
 				Flip ();
 			}
@@ -47,6 +55,8 @@ public class BossAI : MonoBehaviour {
 		{
 			transform.position = Vector2.MoveTowards (transform.position, leftLimit.position, moveSpeed * Time.deltaTime);
 			if (Vector2.Distance (transform.position, leftLimit.position) < 0.1f)
+				
+		
 			{
 				movingRight = true;
 				Flip ();
@@ -59,6 +69,8 @@ public class BossAI : MonoBehaviour {
 	{
 		Vector2 targetPosition = new Vector2(player.position.x, transform.position.y);
 		transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+	
 
 		// Flip enemy if moving in the opposite direction
 		if ((player.position.x < transform.position.x && !isFacingRight) || (player.position.x > transform.position.x && isFacingRight))

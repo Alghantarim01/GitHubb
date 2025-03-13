@@ -35,10 +35,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4656307034877814}
-  - component: {fileID: 212219224715980998}
-  - component: {fileID: 95327919483234012}
   - component: {fileID: 70528358896252276}
   - component: {fileID: 50711612963987692}
+  - component: {fileID: 114882365872792326}
+  - component: {fileID: 212219224715980998}
+  - component: {fileID: 95327919483234012}
   - component: {fileID: 114310230582301208}
   m_Layer: 0
   m_Name: NightBorne
@@ -54,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625575054255942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.62, y: -0.95, z: 0}
+  m_LocalPosition: {x: 84.2, y: -0.81, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4776806593326468}
@@ -81,7 +82,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625575054255942}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -92,7 +93,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &61258419025406130
 BoxCollider2D:
@@ -163,6 +164,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2144584a829890642a42c3d93e23b119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114882365872792326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1625575054255942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6048ab3ba759094ca3d248ae23b96b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  detectionRange: 10
+  moveSpeed: 3
+  stopDistance: 2
+  leftLimit: {fileID: 0}
+  rightLimit: {fileID: 0}
 --- !u!212 &212219224715980998
 SpriteRenderer:
   m_ObjectHideFlags: 1
