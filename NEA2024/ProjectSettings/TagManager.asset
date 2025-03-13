@@ -15,6 +15,12 @@ TagManager:
   - Spike
   - BearTrap
   - Enemy
+  - Mushroom
+  - Skeleton
+  - 'NightBorne '
+  - NightBorne
+  - HeroAttackBox
+  - JumpPoisonPot
   layers:
   - Default
   - TransparentFX
@@ -26,10 +32,10 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
-  - 
-  - 
-  - 
+  - Mushroom
+  - HeroPlayer
+  - HeroAttackBox
+  - Skeleton
   - 
   - 
   - 

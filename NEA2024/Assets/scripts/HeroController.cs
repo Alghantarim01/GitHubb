@@ -83,6 +83,34 @@ public class HeroController : MonoBehaviour
 		}
 	}
 
+	void OnTriggerEnter2D (Collider2D collision)
+	{
+		if (collision.gameObject.tag == "SpeedPot")
+		{
+			speed = 7.5f;
+			StartCoroutine (ResetSpeed());
+		}
+		if (collision.gameObject.tag == "JumpPoisonPot")
+		{
+			jumpForce = 200f;
+			StartCoroutine (ResetJump());
+		}
+	}
+
+	IEnumerator ResetSpeed()
+	{
+		yield return new WaitForSeconds(10f);
+		speed = 5f;
+	}
+		
+
+	IEnumerator ResetJump()
+	{
+		yield return new WaitForSeconds(10f);
+		jumpForce = 300f;
+	}
+
+
 
 
 
