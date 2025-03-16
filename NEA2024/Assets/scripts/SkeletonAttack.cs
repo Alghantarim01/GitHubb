@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SkeletonAttack : MonoBehaviour
 {
+	public Transform leftLimit ;
+	public Transform rightLimit;
+	private bool movingRight = false;
+	public float moveSpeed = 2.5f;
+	private bool isFacingRight = true;
 	Animator EnemyAnimator;
 	GameObject Player;
 	GameObject HeroAttackBox;
@@ -17,9 +22,34 @@ public class SkeletonAttack : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update () {
-
+	void Update ()
+	{
+		if (movingRight)
+		{
+			transform.position = Vector2.MoveTowards (transform.position, rightLimit.position, moveSpeed * Time.deltaTime);
+			if (Vector2.Distance (transform.position, rightLimit.position) < 0.1f)
+			{
+				movingRight = false;
+				Flip ();
+			}
+		} 
+		else 
+		{
+			transform.position = Vector2.MoveTowards (transform.position, leftLimit.position, moveSpeed * Time.deltaTime);
+			if (Vector2.Distance (transform.position, leftLimit.position) < 0.1f) 
+			{
+				movingRight = true;
+				Flip ();
+			}
+		}
 	}
+
+
+
+
+
+
+
 	void OnTriggerEnter2D (Collider2D collision)
 	{
 		if (collision.gameObject.name == "HeroPlayer")
@@ -33,6 +63,15 @@ public class SkeletonAttack : MonoBehaviour
 			EnemyAnimator.Play ("SKhit");
 		}
 	}
+
+		void Flip()
+		{
+			isFacingRight = !isFacingRight;
+			Vector3 localScale = transform.localScale;
+			localScale.x *= -1;
+			transform.localScale = localScale;
+		}
+
 			
 }
 

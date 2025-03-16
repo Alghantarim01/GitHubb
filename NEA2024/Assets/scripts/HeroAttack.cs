@@ -33,7 +33,6 @@ public class HeroAttack : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D collision)
 	{
-		Debug.Log ("hero collided with" + gameObject.tag);
 		//if (collision.gameObject.name == "Mushroom") 
 		{
 			

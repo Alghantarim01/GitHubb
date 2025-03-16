@@ -21,6 +21,8 @@ TagManager:
   - NightBorne
   - HeroAttackBox
   - JumpPoisonPot
+  - DoubleJumpPot
+  - EnemyAttackBox
   layers:
   - Default
   - TransparentFX

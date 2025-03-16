@@ -35,6 +35,12 @@ public class BossAI : MonoBehaviour {
 			isChasingPlayer = false;
 			Patrol ();
 		}
+		if (distanceToPlayer < stopDistance)
+		{
+			isChasingPlayer = false;
+		} 
+
+
 	}
 
 	void Patrol()

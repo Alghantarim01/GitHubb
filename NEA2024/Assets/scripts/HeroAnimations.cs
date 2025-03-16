@@ -26,7 +26,7 @@ public class HeroAnimations : MonoBehaviour {
 			MyAnimator.SetBool ("walk", false);
 		}
 
-		if (Input.GetKey (KeyCode.UpArrow) || (Input.GetKey (KeyCode.W)))
+		if (Input.GetKey (KeyCode.UpArrow) || (Input.GetKey (KeyCode.W) || Input.GetKey(KeyCode.Space)))
 		{
 			MyAnimator.Play ("jump");
 		} 
@@ -34,16 +34,6 @@ public class HeroAnimations : MonoBehaviour {
 		{
 			MyAnimator.SetBool ("jump", false);
 		}
-
-		if (Input.GetKey (KeyCode.LeftShift))
-		{
-			MyAnimator.SetBool ("run", true);
-		} 
-		else 
-		{
-			MyAnimator.SetBool ("run", false);
-		}
-
 		if (Input.GetKey (KeyCode.DownArrow) || (Input.GetKey (KeyCode.S)))
 		{
 			MyAnimator.SetBool ("dead", true);
