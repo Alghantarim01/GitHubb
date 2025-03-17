@@ -2,19 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour {
 	
 	public int Health;
 	public Slider EnemyHealthBar;
+	private int Respawns = 2;
 	Animator HeroAnimator;
 	GameObject Player;
+	GameObject Mushroom;
+	GameObject Skeleton;
+	GameObject Goblin;
+	GameObject NightBorne;
+	GameObject BearTrap;
+	GameObject Spike;
 	// Use this for initialization
 	void Start () 
 	{
 		HeroAnimator = GetComponent<Animator> ();
-		EnemyHealthBar.value = 4;
+		EnemyHealthBar.value = 20;
 		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
+		Mushroom = GameObject.FindGameObjectWithTag ("MSAttackBox");
+		Skeleton = GameObject.FindGameObjectWithTag ("SKAttackBox");
+		Goblin = GameObject.FindGameObjectWithTag ("GBAttackBox");
+		NightBorne = GameObject.FindGameObjectWithTag ("NBAttackBox");
+		BearTrap = GameObject.FindGameObjectWithTag ("BearTrap");
+		Spike = GameObject.FindGameObjectWithTag ("Spike");
 
 	}
 
@@ -22,14 +36,46 @@ public class HealthBar : MonoBehaviour {
 	void Update () 
 	{
 		EnemyHealthBar.value = Health;
+		if( Respawns <= 0 )
+		{
+			SceneManager.LoadScene ("LoseScene");
+		}
 	}
 	void OnTriggerEnter2D (Collider2D collision)
 	{
-		if (collision.gameObject.tag == "EnemyAttackBox")
+		if (collision.gameObject.tag == "MSAttackBox")
 		{
 			Debug.Log ("hero got hit");
 			HeroAnimator.Play ("TakeHit");
 			Health--;
+		}
+		if (collision.gameObject.tag == "SKAttackBox")
+		{
+			Debug.Log ("hero got hit");
+			HeroAnimator.Play ("TakeHit");
+			Health = Health-2;
+		}
+		if (collision.gameObject.tag == "GBAttackBox")
+		{
+			Debug.Log ("hero got hit");
+			HeroAnimator.Play ("TakeHit");
+			Health = Health - 3;
+		}
+		if (collision.gameObject.tag == "NBAttackBox")
+		{
+			Debug.Log ("hero got hit");
+			HeroAnimator.Play ("TakeHit");
+			Health = Health - 4;
+		}
+		if (collision.gameObject.tag == "BearTrap")
+		{
+			Debug.Log ("hero got hit");
+			Health = Health - 20;
+		}
+		if (collision.gameObject.tag == "Spikes")
+		{
+			Debug.Log ("hero got hit");
+			Health = Health - 20;
 		}
 		if ( Health <=0)
 		{
@@ -41,6 +87,7 @@ public class HealthBar : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (1f);
 		Player.SendMessage ("resetPosition");
+		Respawns--;
 	}
 
 

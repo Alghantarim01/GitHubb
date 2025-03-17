@@ -23,6 +23,10 @@ TagManager:
   - JumpPoisonPot
   - DoubleJumpPot
   - EnemyAttackBox
+  - SKAttackBox
+  - MSAttackBox
+  - GBAttackBox
+  - NBAttackBox
   layers:
   - Default
   - TransparentFX

@@ -278,7 +278,7 @@ Prefab:
         type: 3}
     - target: {fileID: 1113116164510130, guid: 50a012011294fef4cbd2b49c0be56ec4, type: 2}
       propertyPath: m_TagString
-      value: EnemyAttackBox
+      value: SKAttackBox
       objectReference: {fileID: 0}
     - target: {fileID: 61859048280841394, guid: 50a012011294fef4cbd2b49c0be56ec4,
         type: 2}
@@ -526,37 +526,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4488286135283456, guid: f4a49bbded83f094d80988762dc45d34,
     type: 2}
   m_PrefabInternal: {fileID: 241934296}
---- !u!1 &354582604 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1728825485612286, guid: 48e5a8df1b358dc4bb3127b150f042ed,
-    type: 2}
-  m_PrefabInternal: {fileID: 1794787972}
---- !u!114 &354582605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 354582604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94aac062df45fc742aaad4c585233844, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!70 &354582606
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 354582604}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.027237203, y: 0.29602695}
-  m_Size: {x: 0.062909484, y: 1.2343776}
-  m_Direction: 0
 --- !u!4 &354582609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4898341189068730, guid: 48e5a8df1b358dc4bb3127b150f042ed,
@@ -770,11 +739,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4541849302106164, guid: eb9534977d947144996dea5638df0567, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 62.8
+      value: 7.36
       objectReference: {fileID: 0}
     - target: {fileID: 4541849302106164, guid: eb9534977d947144996dea5638df0567, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.8
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 4541849302106164, guid: eb9534977d947144996dea5638df0567, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2993,7 +2962,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1521720799829684, guid: 369d409da28fa1a40a6f5da492b0127d, type: 2}
       propertyPath: m_TagString
-      value: EnemyAttackBox
+      value: MSAttackBox
       objectReference: {fileID: 0}
     - target: {fileID: 61139483636984084, guid: 369d409da28fa1a40a6f5da492b0127d,
         type: 2}
@@ -3069,7 +3038,7 @@ Prefab:
       objectReference: {fileID: 1436817690}
     - target: {fileID: 1144597539615726, guid: fd3ca9d5aba1ca542b98cbaf79b4e09c, type: 2}
       propertyPath: m_TagString
-      value: EnemyAttackBox
+      value: NBAttackBox
       objectReference: {fileID: 0}
     - target: {fileID: 61258419025406130, guid: fd3ca9d5aba1ca542b98cbaf79b4e09c,
         type: 2}
@@ -7097,37 +7066,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1728825485612286, guid: 48e5a8df1b358dc4bb3127b150f042ed, type: 2}
-      propertyPath: m_TagString
-      value: BearTrap
-      objectReference: {fileID: 0}
-    - target: {fileID: 61936424931295508, guid: 48e5a8df1b358dc4bb3127b150f042ed,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61936424931295508, guid: 48e5a8df1b358dc4bb3127b150f042ed,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: -0.2908944
-      objectReference: {fileID: 0}
-    - target: {fileID: 61936424931295508, guid: 48e5a8df1b358dc4bb3127b150f042ed,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.618211
-      objectReference: {fileID: 0}
-    - target: {fileID: 61936424931295508, guid: 48e5a8df1b358dc4bb3127b150f042ed,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 0.3357325
-      objectReference: {fileID: 0}
-    - target: {fileID: 61936424931295508, guid: 48e5a8df1b358dc4bb3127b150f042ed,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.528535
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61936424931295508, guid: 48e5a8df1b358dc4bb3127b150f042ed, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48e5a8df1b358dc4bb3127b150f042ed, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1953579888

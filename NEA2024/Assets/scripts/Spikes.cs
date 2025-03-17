@@ -6,7 +6,6 @@ public class Spikes : MonoBehaviour {
 
 	GameObject Player;
 
-
 	// Use this for initialization
 	void Start () {
 		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");

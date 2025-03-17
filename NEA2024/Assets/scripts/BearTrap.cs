@@ -18,11 +18,11 @@ public class BearTrap : MonoBehaviour {
 		
 	}
 
-	IEnumerator Respawn(GameObject Player)
-	{
-		yield return new WaitForSeconds (0.3f); // wait 1 second
-		Player.SendMessage ("resetPosition");
-	}
+//	IEnumerator Respawn(GameObject Player)
+//	{
+//		yield return new WaitForSeconds (0.3f); // wait 1 second
+//		Player.SendMessage ("resetPosition");
+//	}
 
 
 	void OnCollisionEnter2D (Collision2D collision)
@@ -30,7 +30,6 @@ public class BearTrap : MonoBehaviour {
 		if (collision.gameObject.name == "HeroPlayer")
 		{
 			MyAnimator.SetTrigger ("attack");
-			StartCoroutine (Respawn (collision.gameObject));
 		}
 	}
 }
