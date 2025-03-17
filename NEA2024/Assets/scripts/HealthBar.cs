@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour {
 	
 	public int Health;
-	public Slider EnemyHealthBar;
+	public Slider HeroHealthBar;
 	private int Respawns = 2;
 	Animator HeroAnimator;
 	GameObject Player;
@@ -21,7 +21,7 @@ public class HealthBar : MonoBehaviour {
 	void Start () 
 	{
 		HeroAnimator = GetComponent<Animator> ();
-		EnemyHealthBar.value = 20;
+		HeroHealthBar.value = 20;
 		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
 		Mushroom = GameObject.FindGameObjectWithTag ("MSAttackBox");
 		Skeleton = GameObject.FindGameObjectWithTag ("SKAttackBox");
@@ -35,11 +35,12 @@ public class HealthBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		EnemyHealthBar.value = Health;
+		HeroHealthBar.value = Health;
 		if( Respawns <= 0 )
 		{
-			SceneManager.LoadScene ("LoseScene");
+			SceneManager.LoadScene ("LoseScreen");
 		}
+			
 	}
 	void OnTriggerEnter2D (Collider2D collision)
 	{
@@ -72,7 +73,7 @@ public class HealthBar : MonoBehaviour {
 			Debug.Log ("hero got hit");
 			Health = Health - 20;
 		}
-		if (collision.gameObject.tag == "Spikes")
+		if (collision.gameObject.tag == "Spike")
 		{
 			Debug.Log ("hero got hit");
 			Health = Health - 20;
@@ -87,6 +88,8 @@ public class HealthBar : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (1f);
 		Player.SendMessage ("resetPosition");
+		HeroHealthBar.value = 20;
+		Health = 20;
 		Respawns--;
 	}
 

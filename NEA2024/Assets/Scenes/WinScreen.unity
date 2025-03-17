@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 905760515}
   - component: {fileID: 905760514}
   m_Layer: 0
-  m_Name: TextMeshPro Text
+  m_Name: StageCompleted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
