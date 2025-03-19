@@ -271,8 +271,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 484039848}
+  - component: {fileID: 484039849}
   m_Layer: 5
-  m_Name: ReplayLevel1
+  m_Name: ReplayLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,6 +299,17 @@ RectTransform:
   m_AnchoredPosition: {x: 100, y: -81.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &484039849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484039847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a555bf7b75d0bd4c9839c8dd157f20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &609974733
 Prefab:
   m_ObjectHideFlags: 0
@@ -964,8 +976,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1017126906}
-        m_MethodName: Replay
+      - m_Target: {fileID: 484039849}
+        m_MethodName: ReplayLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
