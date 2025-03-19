@@ -8,6 +8,7 @@ public class GoblinHealth : MonoBehaviour {
 	public int Health;
 	public Slider EnemyHealthBar;
 	Animator EnemyAnimator;
+	public GameObject HeroPlayer;
 
 	// Use this for initialization
 	void Start ()
@@ -31,7 +32,7 @@ public class GoblinHealth : MonoBehaviour {
 		}
 		if ( Health <=0)
 		{
-			EnemyAnimator.Play ("GBDead");
+			EnemyAnimator.Play ("GBDeath");
 			StartCoroutine (Despawn ());
 		}
 	}
@@ -40,5 +41,7 @@ public class GoblinHealth : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (1f);
 		Destroy (gameObject);
+		Debug.Log ("spawn star");
+		HeroPlayer.SendMessage ("GBSpawnStar");
 	}
 }

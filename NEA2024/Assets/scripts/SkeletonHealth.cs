@@ -8,6 +8,7 @@ public class SkeletonHealth : MonoBehaviour {
 	public int Health;
 	public Slider EnemyHealthBar;
 	Animator EnemyAnimator;
+	public GameObject HeroPlayer;
 
 	// Use this for initialization
 	void Start ()
@@ -20,11 +21,6 @@ public class SkeletonHealth : MonoBehaviour {
 	void Update () 
 	{
 		EnemyHealthBar.value = Health;
-	}
-
-	void makeDead()
-	{
-		Destroy (gameObject);
 	}
 
 	void OnTriggerEnter2D (Collider2D collision)
@@ -44,6 +40,7 @@ public class SkeletonHealth : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (1f);
 		Destroy (gameObject);
+		HeroPlayer.SendMessage ("SKSpawnStar");
 	}
 
 }

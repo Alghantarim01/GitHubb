@@ -10,7 +10,7 @@ public class BossAI : MonoBehaviour {
 	public Transform leftLimit ;
 	public Transform rightLimit;
 	private bool isFacingRight = true;
-	private bool isChasingPlayer = false;
+	public bool isChasingPlayer = false;
 	private bool movingRight = false;
 	Animator EnemyAnimator;
 

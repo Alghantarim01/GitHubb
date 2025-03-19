@@ -8,6 +8,7 @@ public class MushroomHealth : MonoBehaviour {
 	public int Health;
 	public Slider EnemyHealthBar;
 	Animator EnemyAnimator;
+	public GameObject HeroPlayer;
 
 	// Use this for initialization
 	void Start ()
@@ -44,6 +45,8 @@ public class MushroomHealth : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (1f);
 		Destroy (gameObject);
+		HeroPlayer.SendMessage ("MSSpawnStar");
+
 	}
 		
 }
