@@ -17,8 +17,8 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		totalEnemies = GameObject.FindGameObjectsWithTag ("Enemy");
-		enemyCounter.text = "enemies" + totalEnemies.Length.ToString ();
-		if (totalEnemies.Length == 0) {
+	//	enemyCounter.text = "enemies" + totalEnemies.Length.ToString ();
+		if (totalEnemies.Length == 10) {
 			HeroPlayer.SendMessage ("SpawnAlter");
 		}
 	}

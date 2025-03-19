@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class StarBar : MonoBehaviour {
+
+	public Slider CollectedStars;
+	public int Stars;
+	public GameObject HeroPlayer;
+	//GameObject Player;
+
+	// Use this for initialization
+	void Start () {
+		CollectedStars.value = 1;
+		//Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
+
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		CollectedStars.value = Stars;
+		if ( Stars >= 3 )
+		{
+			HeroPlayer.SendMessage ("SpawnAlter");
+		}
+	}
+
+	void OnTriggerEnter2D (Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Star")
+		{
+			Debug.Log ("touch star");
+			//Destroy(gameObject);
+			Stars ++;
+			//CollectedStars.value = Stars;
+		}
+	}
+
+}
