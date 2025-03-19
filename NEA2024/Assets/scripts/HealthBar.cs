@@ -40,6 +40,11 @@ public class HealthBar : MonoBehaviour {
 		{
 			SceneManager.LoadScene ("LoseScreen");
 		}
+		if ( Health <=0)
+		{
+			HeroAnimator.Play ("dead");
+			StartCoroutine (Despawn ());
+		}
 			
 	}
 	void OnTriggerEnter2D (Collider2D collision)
@@ -78,11 +83,12 @@ public class HealthBar : MonoBehaviour {
 			Debug.Log ("hero got hit");
 			Health = Health - 20;
 		}
-		if ( Health <=0)
+		if (collision.gameObject.tag == "HealthPot")
 		{
-			HeroAnimator.Play ("dead");
-			StartCoroutine (Despawn ());
+			Debug.Log ("hero got health buff");
+			Health = Health + 5;
 		}
+
 	}
 	IEnumerator Despawn ()
 	{
