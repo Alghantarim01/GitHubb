@@ -261,8 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 4
   EnemyHealthBar: {fileID: 114823455532498814}
-  StarSpawn: {fileID: 1992098535540056, guid: f0706159d054d5848abe16bf40038dd0, type: 2}
-  SpawnPoint: {fileID: 0}
+  HeroPlayer: {fileID: 0}
 --- !u!114 &114198775194712718
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -40,47 +40,42 @@ public class HealthBar : MonoBehaviour {
 		{
 			SceneManager.LoadScene ("LoseScreen");
 		}
-		if ( Health <=0)
-		{
-			HeroAnimator.Play ("dead");
-			StartCoroutine (Despawn ());
-		}
-			
+
 	}
 	void OnTriggerEnter2D (Collider2D collision)
 	{
 		if (collision.gameObject.tag == "MSAttackBox")
 		{
-			Debug.Log ("hero got hit");
+			Debug.Log ("hero got hit by ms");
 			HeroAnimator.Play ("TakeHit");
 			Health--;
 		}
 		if (collision.gameObject.tag == "SKAttackBox")
 		{
-			Debug.Log ("hero got hit");
+			Debug.Log ("hero got hit sk");
 			HeroAnimator.Play ("TakeHit");
 			Health = Health-2;
 		}
 		if (collision.gameObject.tag == "GBAttackBox")
 		{
-			Debug.Log ("hero got hit");
+			Debug.Log ("hero got hit gb");
 			HeroAnimator.Play ("TakeHit");
 			Health = Health - 3;
 		}
 		if (collision.gameObject.tag == "NBAttackBox")
 		{
-			Debug.Log ("hero got hit");
+			Debug.Log ("hero got hit nb");
 			HeroAnimator.Play ("TakeHit");
 			Health = Health - 4;
 		}
 		if (collision.gameObject.tag == "BearTrap")
 		{
-			Debug.Log ("hero got hit");
+			Debug.Log ("hero got hit bt");
 			Health = Health - 20;
 		}
 		if (collision.gameObject.tag == "Spike")
 		{
-			Debug.Log ("hero got hit");
+			Debug.Log ("hero got hit spk");
 			Health = Health - 20;
 		}
 		if (collision.gameObject.tag == "HealthPot")
@@ -88,15 +83,40 @@ public class HealthBar : MonoBehaviour {
 			Debug.Log ("hero got health buff");
 			Health = Health + 5;
 		}
+		if (collision.gameObject.tag == "HealthPoison")
+		{
+			Debug.Log ("hero got health debuff");
+			Health = Health - 5;
+		}
+		if (collision.gameObject.tag == "NoDamagePot")
+		{
+			Debug.Log ("hero got health buff");
+			Health = Health + 100;
+			StartCoroutine (resetHealth());
+		}
+		if ( Health <=0)
+		{
+			HeroAnimator.Play ("dead");
+			StartCoroutine (Despawn ());
+		}
+
 
 	}
 	IEnumerator Despawn ()
 	{
 		yield return new WaitForSeconds (1f);
 		Player.SendMessage ("resetPosition");
+		StartCoroutine (resetHealth());
+		Respawns--;
+		Debug.Log ("despawn player");
+	}
+	IEnumerator resetHealth ()
+	{
+		yield return new WaitForSeconds (10f);
 		HeroHealthBar.value = 20;
 		Health = 20;
-		Respawns--;
+		Debug.Log ("reset lives ");
+
 	}
 
 

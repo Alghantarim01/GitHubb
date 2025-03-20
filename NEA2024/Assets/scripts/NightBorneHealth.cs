@@ -8,8 +8,6 @@ public class NightBorneHealth : MonoBehaviour {
 	public int Health;
 	public Slider EnemyHealthBar;
 	Animator EnemyAnimator;
-	public GameObject StarSpawn;
-	public Transform SpawnPoint;
 	public GameObject HeroPlayer;
 
 	// Use this for initialization

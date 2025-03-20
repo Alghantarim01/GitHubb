@@ -8,7 +8,7 @@ public class StarBar : MonoBehaviour {
 	public Slider CollectedStars;
 	public int Stars;
 	public GameObject HeroPlayer;
-	//GameObject Player;
+
 
 	// Use this for initialization
 	void Start () {

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50996082645301882}
   m_Layer: 0
   m_Name: SpeedPoison
-  m_TagString: ExtraDamagePot
+  m_TagString: SpeedPoison
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

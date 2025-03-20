@@ -30,6 +30,11 @@ TagManager:
   - Star
   - Goblin
   - EndAlter
+  - SlowPot
+  - SpeedPoison
+  - WeakPoison
+  - JumpPoison
+  - HealthPoison
   layers:
   - Default
   - TransparentFX

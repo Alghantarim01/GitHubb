@@ -84,17 +84,9 @@ public class HeroController : MonoBehaviour
 
 	void resetPosition()
 	{
-		Debug.Log ("spike recieved");
 		transform.SetPositionAndRotation( new Vector3 (-10.5f, -2.7f, 0) , Quaternion.identity);
 	}
-
-	public void setLives()
-	{
-		if (lives <= 0)
-		{
-			Debug.Log ("end of game");
-		}
-	}
+		
 
 	void OnTriggerEnter2D (Collider2D collision)
 	{
@@ -103,9 +95,9 @@ public class HeroController : MonoBehaviour
 			speed = 10f;
 			StartCoroutine (ResetSpeed());
 		}
-		if (collision.gameObject.tag == "SpeedPoisonPot")
+		if (collision.gameObject.tag == "SpeedPoison")
 		{
-			speed = 5f;
+			speed = 4f;
 			StartCoroutine (ResetSpeed());
 		}
 		if (collision.gameObject.tag == "DoubleJumpPot")
@@ -113,11 +105,17 @@ public class HeroController : MonoBehaviour
 			DoubleJumpOn = true;
 			StartCoroutine (ResetDoubleJump());
 		}
-		if (collision.gameObject.tag == "NoDamagePot")
+		if (collision.gameObject.tag == "JumpPoison")
 		{
-//			disableMouseClicks = true;
-			StartCoroutine (ResetMouse());
+			jumpForce = 200f;
+			StartCoroutine (ResetJump());
 		}
+		if (collision.gameObject.tag == "WeakPoison")
+		{
+			speed = 0f;
+			StartCoroutine (ResetSpeed());
+		}
+
 
 
 	}
@@ -138,11 +136,7 @@ public class HeroController : MonoBehaviour
 		yield return new WaitForSeconds(15f);
 		DoubleJumpOn = false;
 	}
-	IEnumerator ResetMouse()
-	{
-		yield return new WaitForSeconds(10f);
-//		disableMouseClicks = false;
-	}
+
 
 
 

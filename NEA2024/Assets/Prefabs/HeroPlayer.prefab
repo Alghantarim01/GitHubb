@@ -21,14 +21,13 @@ GameObject:
   - component: {fileID: 4541849302106164}
   - component: {fileID: 70597554884364112}
   - component: {fileID: 50094583778818294}
-  - component: {fileID: 114027199308215716}
   - component: {fileID: 212449708249663734}
   - component: {fileID: 95632042238301136}
-  - component: {fileID: 114379969860733024}
+  - component: {fileID: 114027199308215716}
   - component: {fileID: 114495518965392070}
   - component: {fileID: 114402812726031558}
   - component: {fileID: 114171958944905586}
-  - component: {fileID: 114214309816306872}
+  - component: {fileID: 114556802115832984}
   m_Layer: 9
   m_Name: HeroPlayer
   m_TagString: HeroPlayer
@@ -118,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1207292129478342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.06, y: -2.94, z: 0}
+  m_LocalPosition: {x: -8.48, y: -1.66, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4016595651736096}
@@ -297,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 20
-  EnemyHealthBar: {fileID: 0}
+  HeroHealthBar: {fileID: 0}
 --- !u!114 &114171958944905586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,33 +309,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Alter: {fileID: 1620463221831618, guid: ce0176159b19a9d4e91d196827bdc78f, type: 2}
-  SpawnedPosition: {x: 75.5, y: -1.15, z: 0}
---- !u!114 &114214309816306872
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207292129478342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d04a836a3ca4940881c393c246fde5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  health: 0
---- !u!114 &114379969860733024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1207292129478342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1483b6ec46fb6e243b760666e494b169, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyCollider: {fileID: 0}
-  playerCollider: {fileID: 0}
+  AlterSpawnedPosition: {x: 0, y: 0, z: 0}
+  EndAlter: {fileID: 1620463221831618, guid: ce0176159b19a9d4e91d196827bdc78f, type: 2}
+  Star: {fileID: 1401559409019664, guid: ac2990013d338654b9b1a7c4794b2f27, type: 2}
+  MSStarSpawnedPosition: {x: 0, y: 0, z: 0}
+  SKStarSpawnedPosition: {x: 0, y: 0, z: 0}
+  GBStarSpawnedPosition: {x: 0, y: 0, z: 0}
+  NBStarSpawnedPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114402812726031558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,6 +346,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 311
   lives: 2
+--- !u!114 &114556802115832984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207292129478342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a90edd3827c45e4b9d25b748e76357a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollectedStars: {fileID: 0}
+  Stars: 0
+  HeroPlayer: {fileID: 1207292129478342}
 --- !u!212 &212449708249663734
 SpriteRenderer:
   m_ObjectHideFlags: 1
