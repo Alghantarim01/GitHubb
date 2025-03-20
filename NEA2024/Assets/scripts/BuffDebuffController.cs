@@ -15,10 +15,9 @@ public class BuffDebuffController : MonoBehaviour {
 	}
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "HeroPlayer")
+		if (other.gameObject.tag == "HeroPlayer") // checks if the player has touched the buff or debuuf 
 		{
-			Destroy(this.gameObject);
+			Destroy(this.gameObject); // removes the buff or debuff 
 		}
-
 	}
 }

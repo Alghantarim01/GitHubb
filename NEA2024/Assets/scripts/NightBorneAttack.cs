@@ -11,9 +11,9 @@ public class NightBorneAttack : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		EnemyAnimator = GetComponent<Animator> ();
-		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
-		HeroAttackBox = GameObject.FindGameObjectWithTag ("HeroAttackBox");
+		EnemyAnimator = GetComponent<Animator> (); // allows me to animate my enemy 
+		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");// find the player 
+		HeroAttackBox = GameObject.FindGameObjectWithTag ("HeroAttackBox");// find the player sword 
 	}
 
 	// Update is called once per frame
@@ -22,15 +22,13 @@ public class NightBorneAttack : MonoBehaviour {
 	}
 	void OnTriggerEnter2D (Collider2D collision)
 	{
-		if (collision.gameObject.name == "HeroPlayer")
+		if (collision.gameObject.name == "HeroPlayer")// checks if the player has touched the enemy 
 		{
-			EnemyAnimator.Play ("NBAttack");
-			Debug.Log ("reduce player health");
+			EnemyAnimator.Play ("NBAttack");// plays enemy attack animation 
 		} 
-		if (collision.gameObject.name == "HeroAttackBox") 
+		if (collision.gameObject.name == "HeroAttackBox") // checks if the player sword has touched the enemy
 		{
-			Debug.Log ("reduce enemy health");
-			EnemyAnimator.Play ("NBTakeHit");
+			EnemyAnimator.Play ("NBTakeHit");// plays enemy hurt animation 
 		}
 	}
 }
