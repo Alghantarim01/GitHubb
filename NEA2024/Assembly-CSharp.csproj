@@ -68,7 +68,6 @@
      <Compile Include="Assets\scripts\MushroomHealth.cs" />
      <Compile Include="Assets\scripts\NightBorneAttack.cs" />
      <Compile Include="Assets\scripts\NightBorneHealth.cs" />
-     <Compile Include="Assets\scripts\Settings.cs" />
      <Compile Include="Assets\scripts\SkeletonAttack.cs" />
      <Compile Include="Assets\scripts\SkeletonHealth.cs" />
      <Compile Include="Assets\scripts\Spawner.cs" />

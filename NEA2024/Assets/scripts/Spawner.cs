@@ -24,10 +24,10 @@ public class Spawner : MonoBehaviour {
 		GameObject goblin = GameObject.FindWithTag ("Goblin");
 		GameObject nightBorne = GameObject.FindWithTag ("NightBorne");
 		AlterSpawnedPosition = new Vector3 (75.5f, -1.15f, 0);
-		MSStarSpawnedPosition = mushroom.transform.position;  
-		SKStarSpawnedPosition = skeleton.transform.position; 
-		GBStarSpawnedPosition = goblin.transform.position; 
-		NBStarSpawnedPosition = nightBorne.transform.position; 
+		MSStarSpawnedPosition = mushroom.transform.position;  // gets position of enemy 
+		SKStarSpawnedPosition = skeleton.transform.position; // gets position of enemy  
+		GBStarSpawnedPosition = goblin.transform.position;  // gets position of enemy 
+		NBStarSpawnedPosition = nightBorne.transform.position;  // gets position of enemy 
 
 	}
 	
@@ -36,38 +36,33 @@ public class Spawner : MonoBehaviour {
 		
 	}
 
-	void MSSpawnStar()
+	void MSSpawnStar()// spawns the star at the postion of the enemy 
 	{
 			Instantiate (Star, MSStarSpawnedPosition, Quaternion.identity);
-			Debug.Log ("STar spawned");
 	}
-	void SKSpawnStar()
+	void SKSpawnStar()// spawns the star at the postion of the enemy 
 	{
 			Instantiate (Star, SKStarSpawnedPosition, Quaternion.identity);
-			Debug.Log ("STar spawned");
 	}
-	void GBSpawnStar()
+	void GBSpawnStar()// spawns the star at the postion of the enemy 
 	{
 			Instantiate (Star, GBStarSpawnedPosition, Quaternion.identity);
-			Debug.Log ("STar spawned");
 	}
-	void NBSpawnStar()
+	void NBSpawnStar()// spawns the star at the postion of the enemy 
 	{
 			Instantiate (Star, NBStarSpawnedPosition, Quaternion.identity);
-			Debug.Log ("STar spawned");
 	}
 
-	void SpawnAlter()
+	void SpawnAlter()// spawns alter 
 	{
 		if (AlterSpawned == false)
 		{
 			AlterSpawned = true;
 			Instantiate (Alter, AlterSpawnedPosition, Quaternion.identity);
-			Debug.Log ("Alyter spawned");
 		}
 	}
 
-	void OnTriggerEnter2D (Collider2D collision)
+	void OnTriggerEnter2D (Collider2D collision)// if player touches the alter load the win screen 
 	{
 		if(collision.gameObject.tag == "EndAlter")
 			{

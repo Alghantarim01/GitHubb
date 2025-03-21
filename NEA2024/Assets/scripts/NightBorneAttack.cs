@@ -20,6 +20,7 @@ public class NightBorneAttack : MonoBehaviour {
 	void Update () {
 
 	}
+
 	void OnTriggerEnter2D (Collider2D collision)
 	{
 		if (collision.gameObject.name == "HeroPlayer")// checks if the player has touched the enemy 

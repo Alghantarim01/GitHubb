@@ -14,9 +14,10 @@ public class StarController : MonoBehaviour {
 
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter2D(Collider2D other)// despawns star once olayer collects it 
 	{
-		if (other.gameObject.tag == "HeroPlayer") {
+		if (other.gameObject.tag == "HeroPlayer") 
+		{
 			Destroy (gameObject);
 		}
 	}

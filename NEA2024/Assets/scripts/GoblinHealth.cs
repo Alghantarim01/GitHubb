@@ -5,26 +5,25 @@ using UnityEngine.UI;
 
 public class GoblinHealth : MonoBehaviour {
 
-	public int Health;
-	public Slider EnemyHealthBar;
-	Animator EnemyAnimator;
-	public GameObject HeroPlayer;
+	public int Health; // health value
+	public Slider EnemyHealthBar; // UI slider to represt how full the health bar is 
+	Animator EnemyAnimator; // allows me to animate the enemy 
+	public GameObject HeroPlayer; // refrence the player 
 
 	// Use this for initialization
 	void Start ()
 	{
-		EnemyAnimator = GetComponent<Animator> ();
-		EnemyHealthBar.value = 10;
+		EnemyAnimator = GetComponent<Animator> (); // allows me to animate enemy
+		EnemyHealthBar.value = 10;// set the value of the health bar
 
 	}
 	// Update is called once per frame
 	void Update () 
 	{
-		EnemyHealthBar.value = Health;
+		EnemyHealthBar.value = Health; // ensures the correct health is always displayed 
 	}
 
-
-	void OnTriggerEnter2D (Collider2D collision)
+	void OnTriggerEnter2D (Collider2D collision)// if the enemy touches the player sword minus 1 health point and if the health of enemy is zero play death animation
 	{
 		if (collision.gameObject.name == "HeroAttackBox")
 		{
@@ -37,11 +36,10 @@ public class GoblinHealth : MonoBehaviour {
 		}
 	}
 
-	IEnumerator Despawn ()
+	IEnumerator Despawn ()// waits 1 second before it despawns the enemy then starts the star spawner method 
 	{
 		yield return new WaitForSeconds (1f);
 		Destroy (gameObject);
-		Debug.Log ("spawn star");
 		HeroPlayer.SendMessage ("GBSpawnStar");
 	}
 }

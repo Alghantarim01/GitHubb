@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class HeroAnimations : MonoBehaviour {
 
-
-
-
-	Animator MyAnimator;
+	Animator MyAnimator; // allows me to animate my player 
 
 	void Start ()
 	{
@@ -15,7 +12,7 @@ public class HeroAnimations : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void Update () // playes an animation depending on key strokes 
 	{
 		if (Input.GetKey (KeyCode.RightArrow) || (Input.GetKey (KeyCode.LeftArrow)|| (Input.GetKey (KeyCode.A)|| (Input.GetKey (KeyCode.D)))))
 		{
@@ -25,7 +22,6 @@ public class HeroAnimations : MonoBehaviour {
 		{
 			MyAnimator.SetBool ("walk", false);
 		}
-
 		if (Input.GetKey (KeyCode.UpArrow) || (Input.GetKey (KeyCode.W) || Input.GetKey(KeyCode.Space)))
 		{
 			MyAnimator.Play ("jump");
@@ -50,7 +46,6 @@ public class HeroAnimations : MonoBehaviour {
 		{
 			MyAnimator.SetBool ("attack", false);
 		}
-
 		if (Input.GetKey (KeyCode.Mouse1))
 		{
 			MyAnimator.SetBool ("attack2", true);
@@ -59,11 +54,5 @@ public class HeroAnimations : MonoBehaviour {
 		{
 			MyAnimator.SetBool ("attack2", false);
 		}
-
-
-
-
-
-
 	}
 }

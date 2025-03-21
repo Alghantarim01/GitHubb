@@ -17,15 +17,12 @@ public class HeroController : MonoBehaviour
 	public LayerMask WhatIsGround;
 	public int lives = 2;
 
-
-
 	void Start () 
 	{
-		rb = GetComponent<Rigidbody2D> ();
-		facingRight = true;
+		rb = GetComponent<Rigidbody2D> (); 
+		facingRight = true; // sets variable to true 
 	}
-
-
+		
 	void update()
 	{
 
@@ -34,33 +31,29 @@ public class HeroController : MonoBehaviour
 	void FixedUpdate ()
 	{
 		bool jump = Input.GetButtonDown ("Jump");
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, WhatIsGround);
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, WhatIsGround); // checks if the player is touching the ground 
 
-		if (Input.GetButtonDown ("Jump") && grounded && DoubleJumpOn == false)
+		if (Input.GetButtonDown ("Jump") && grounded && DoubleJumpOn == false) // allows the player to jump if they dont have a buff and they are touching the ground
 		{
 			GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpForce);
 		}
 
-		if (grounded) 
+		if (grounded) // if player is touching the gorund reset the jump count
 		{
 			jumpCount = 0;
 		}
 			// Jump Logic
-		if (Input.GetButtonDown ("Jump") && DoubleJumpOn == true && jumpCount < maxJump)
+		if (Input.GetButtonDown ("Jump") && DoubleJumpOn == true && jumpCount < maxJump) // if buff enabled the player can double jump and inrement jump count
 		{ 
 			GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpForce);
 			jumpCount++;
 		}
-		
-	
 
-
-
-		float move = Input.GetAxis ("Horizontal");
+		float move = Input.GetAxis ("Horizontal"); // allows the player to move 
 		rb.velocity = new Vector2 (move * speed, rb.velocity.y);
 		//Debug.Log ("current speed" + speed);
 
-		if (move > 0 && !facingRight) 
+		if (move > 0 && !facingRight) // ensures the player faces the right direction 
 		{
 			flip ();
 		} 
@@ -70,11 +63,7 @@ public class HeroController : MonoBehaviour
 		}
 	}
 
-
-
-
-
-	void flip()
+	void flip()// ensures the player is facing the right way by multipling the x axis scale by -1 
 	{
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
@@ -82,13 +71,7 @@ public class HeroController : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-	void resetPosition()
-	{
-		transform.SetPositionAndRotation( new Vector3 (-10.5f, -2.7f, 0) , Quaternion.identity);
-	}
-		
-
-	void OnTriggerEnter2D (Collider2D collision)
+	void OnTriggerEnter2D (Collider2D collision)// applies buff or debuff depending on what the player collides with 
 	{
 		if (collision.gameObject.tag == "SpeedPot")
 		{
@@ -115,31 +98,24 @@ public class HeroController : MonoBehaviour
 			speed = 0f;
 			StartCoroutine (ResetSpeed());
 		}
-
-
-
 	}
 
-	IEnumerator ResetSpeed()
+	IEnumerator ResetSpeed()// resets the speed of player after 10 seconds 
 	{
 		yield return new WaitForSeconds(10f);
 		speed = 7f;
 	}
 		
-	IEnumerator ResetJump()
+	IEnumerator ResetJump() // resets the jump highet of player after 5 seconds 
 	{
 		yield return new WaitForSeconds(5f);
 		jumpForce = 300f;
 	}
-	IEnumerator ResetDoubleJump()
+	IEnumerator ResetDoubleJump() 
 	{
-		yield return new WaitForSeconds(15f);
+		yield return new WaitForSeconds(10f); // resets the double jump buff
 		DoubleJumpOn = false;
 	}
-
-
-
-
 }
 
 	

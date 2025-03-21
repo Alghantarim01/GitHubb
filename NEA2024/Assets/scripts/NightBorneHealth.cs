@@ -13,35 +13,30 @@ public class NightBorneHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		EnemyAnimator = GetComponent<Animator> ();
-		EnemyHealthBar.value = 12;
+		EnemyAnimator = GetComponent<Animator> ();// allows me to animate the enemy 
+		EnemyHealthBar.value = 12;// sets the health bar value of the enemy 
 
 	}
 	// Update is called once per frame
 	void Update () 
 	{
-		EnemyHealthBar.value = Health;
+		EnemyHealthBar.value = Health;// ensures the right value health bar value is dispalyed 
 	}
 
-	void makeDead()
-	{
-		Destroy (gameObject);
-	}
-
-	void OnTriggerEnter2D (Collider2D collision)
+	void OnTriggerEnter2D (Collider2D collision)// if enemy touches player sword minus health 
 	{
 		if (collision.gameObject.name == "HeroAttackBox")
 		{
 			Health--;
 		}
-		if ( Health <=0)
+		if ( Health <=0)// if health is zero play death animation and start the despawn coroutine 
 		{
 			EnemyAnimator.Play ("NBDead");
 			StartCoroutine (Despawn ());
 		}
 	}
 
-	IEnumerator Despawn ()
+	IEnumerator Despawn () // wait a second before despawning the player and spawing the star 
 	{
 		yield return new WaitForSeconds (1f);
 		Destroy (gameObject);

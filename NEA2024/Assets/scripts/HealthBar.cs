@@ -8,7 +8,7 @@ public class HealthBar : MonoBehaviour {
 	
 	public int Health;
 	public Slider HeroHealthBar;
-	private int Respawns = 2;
+	private int Lives = 2;
 	Animator HeroAnimator;
 	GameObject Player;
 	GameObject Mushroom;
@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour {
 	GameObject BearTrap;
 	GameObject Spike;
 	// Use this for initialization
-	void Start () 
+	void Start () // refrenaces all the game objects im going to use 
 	{
 		HeroAnimator = GetComponent<Animator> ();
 		HeroHealthBar.value = 20;
@@ -33,16 +33,16 @@ public class HealthBar : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
-		HeroHealthBar.value = Health;
-		if( Respawns <= 0 )
+		HeroHealthBar.value = Health; // ensures correct health bar value is displayed 
+		if( Lives <= 0 )// if player runs out of lives display the lose screen 
 		{
 			SceneManager.LoadScene ("LoseScreen");
 		}
-
 	}
-	void OnTriggerEnter2D (Collider2D collision)
+
+	void OnTriggerEnter2D (Collider2D collision)// depending on what the player touches it will either do a buff or debuff or remove health if touched a player
 	{
 		if (collision.gameObject.tag == "MSAttackBox")
 		{
@@ -94,29 +94,25 @@ public class HealthBar : MonoBehaviour {
 			Health = Health + 100;
 			StartCoroutine (resetHealth());
 		}
-		if ( Health <=0)
+		if ( Health <=0)// if player health is zero play dead animation and start despawn coroutine
 		{
 			HeroAnimator.Play ("dead");
 			StartCoroutine (Despawn ());
 		}
 
-
 	}
-	IEnumerator Despawn ()
+	IEnumerator Despawn ()// waits one second before it despawns the player and removes a live and starts the reset health coroutine 
 	{
 		yield return new WaitForSeconds (1f);
 		Player.SendMessage ("resetPosition");
 		StartCoroutine (resetHealth());
-		Respawns--;
-		Debug.Log ("despawn player");
+		Lives--;
 	}
-	IEnumerator resetHealth ()
+	IEnumerator resetHealth ()// waits a second to reset the health bar value and health 
 	{
 		yield return new WaitForSeconds (10f);
 		HeroHealthBar.value = 20;
 		Health = 20;
-		Debug.Log ("reset lives ");
-
 	}
 
 

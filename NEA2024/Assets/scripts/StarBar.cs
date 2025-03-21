@@ -11,30 +11,26 @@ public class StarBar : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		CollectedStars.value = 1;
-		//Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
-
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		CollectedStars.value = Stars;
-		if ( Stars >= 3 )
+		CollectedStars.value = Stars; // ensures the right value is displayed for the stars 
+		if ( Stars >= 3 )// if all stars are collected start the spawn alter method 
 		{
 			HeroPlayer.SendMessage ("SpawnAlter");
 		}
 	}
 
-	void OnTriggerEnter2D (Collider2D collision)
+	void OnTriggerEnter2D (Collider2D collision)// if player touches a star increment the amount of stars 
 	{
 		if (collision.gameObject.tag == "Star")
 		{
-			Debug.Log ("touch star");
-			//Destroy(gameObject);
 			Stars ++;
-			//CollectedStars.value = Stars;
 		}
 	}
 

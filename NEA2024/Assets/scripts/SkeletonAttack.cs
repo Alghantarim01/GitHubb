@@ -16,7 +16,7 @@ public class SkeletonAttack : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		EnemyAnimator = GetComponent<Animator> ();
+		EnemyAnimator = GetComponent<Animator> ();// allows me to animate the enemy 
 		Player = GameObject.FindGameObjectWithTag ("HeroPlayer");
 		HeroAttackBox = GameObject.FindGameObjectWithTag ("HeroAttackBox");
 	}
@@ -24,10 +24,10 @@ public class SkeletonAttack : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (movingRight)
+		if (movingRight)// if the player is not moving right 
 		{
-			transform.position = Vector2.MoveTowards (transform.position, rightLimit.position, moveSpeed * Time.deltaTime);
-			if (Vector2.Distance (transform.position, rightLimit.position) < 0.1f)
+			transform.position = Vector2.MoveTowards (transform.position, rightLimit.position, moveSpeed * Time.deltaTime);// move enemy towards the right maximum at a set speed 
+			if (Vector2.Distance (transform.position, rightLimit.position) < 0.1f) // if the enemy has reached the right maximum flip the player and set moving right to false
 			{
 				movingRight = false;
 				Flip ();
@@ -35,8 +35,8 @@ public class SkeletonAttack : MonoBehaviour
 		} 
 		else 
 		{
-			transform.position = Vector2.MoveTowards (transform.position, leftLimit.position, moveSpeed * Time.deltaTime);
-			if (Vector2.Distance (transform.position, leftLimit.position) < 0.1f) 
+			transform.position = Vector2.MoveTowards (transform.position, leftLimit.position, moveSpeed * Time.deltaTime);// move enemy towards the left maximum at a set speed 
+			if (Vector2.Distance (transform.position, leftLimit.position) < 0.1f) // if the enemy has reached the left maximum flip the player and set moving right to true
 			{
 				movingRight = true;
 				Flip ();
@@ -44,27 +44,19 @@ public class SkeletonAttack : MonoBehaviour
 		}
 	}
 
-
-
-
-
-
-
-	void OnTriggerEnter2D (Collider2D collision)
+	void OnTriggerEnter2D (Collider2D collision)// if enemy touches player play attack animation 
 	{
 		if (collision.gameObject.name == "HeroPlayer")
 		{
 			EnemyAnimator.Play ("SKattack");
-			Debug.Log ("reduce player health");
 		} 
-		if (collision.gameObject.name == "HeroAttackBox")
+		if (collision.gameObject.name == "HeroAttackBox")// if enemy touches sword play take hit animation 
 		{
-			Debug.Log ("reduce enemy health");
 			EnemyAnimator.Play ("SKhit");
 		}
 	}
 
-		void Flip()
+		void Flip()// ensure the enemy if facing the right direction 
 		{
 			isFacingRight = !isFacingRight;
 			Vector3 localScale = transform.localScale;
@@ -72,7 +64,6 @@ public class SkeletonAttack : MonoBehaviour
 			transform.localScale = localScale;
 		}
 
-			
 }
 
 

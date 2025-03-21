@@ -5,7 +5,8 @@ using UnityEngine;
 public class Audio : MonoBehaviour {
 
 
-	void Update () {
+	void Update () 
+	{
 		float sliderValue = PlayerPrefs.GetFloat ("Volume"); // ensures slider value is equal to the set volume 
 		this.GetComponent<AudioSource> ().volume = sliderValue; // makes the volume of the music equal to the value of the slider 
 	}

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement; //this allows me to use the unity built in sc
 
 public class LevelSelection : MonoBehaviour {
 
-	public void SelectLevel1()
+	public void SelectLevel1()// loads my secenes depend on the button clicked 
 	{
 		SceneManager.LoadScene("Level1Scene");
 	}

@@ -63,7 +63,7 @@ public class BossAI : MonoBehaviour {
 	{
 		Vector2 targetPosition = new Vector2(player.position.x, transform.position.y); // gets the postion of the player 
 		transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime); // makes the enemy move towards the players position at a set speed
-		if ((player.position.x < transform.position.x && !isFacingRight) || (player.position.x > transform.position.x && isFacingRight)) // checks if the enemy is facing the player whilst they are in range 
+		if ((player.position.x < transform.position.x && !isFacingRight) || (player.position.x > transform.position.x && isFacingRight)) // checks if the enemy is facing the player
 		{
 			Flip();// flips the direction the enemy is facing 
 		}
